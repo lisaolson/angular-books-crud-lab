@@ -1,24 +1,25 @@
 console.log('app.js is linked!');
 
 angular
-  .module('books', [])
-  .controller('BooksIndexController', BooksIndexController);
+  .module('books', ['ngRoute'])
+  .config(config);
 
-  BooksIndexController.$inject=['$http'];
-  function BooksIndexController($http) {
-    var vm = this;
 
-      $http({
-        method: 'GET',
-        url: "https://super-crud.herokuapp.com/books"
-      }).then(onBooksIndexSuccess, onError)
+config.$inject = ['$routeProvider', '$locationProvider'];
+function config ( $routeProvider, $locationProvider ) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'templates/books/index.html',
+      controller: 'BooksIndexController',
+      controllerAs: 'booksIndexCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
 
-      function onBooksIndexSuccess(response){
-        console.log('get request for books', response.data);
-        vm.books = response.data.books;
-      }
-
-      function onError(error){
-        console.log('there was an error: ', error);
-      }
-  };
+    $locationProvider
+      .html5Moxe({
+        enabled: true,
+        requireBase: false
+      });
+    }
