@@ -1,5 +1,5 @@
 angular
-  .module('books')
+  .module('booksApp')
   .controller('BooksIndexController', BooksIndexController);
 
 BooksIndexController.$inject=['$http'];

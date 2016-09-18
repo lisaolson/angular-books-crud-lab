@@ -13,12 +13,12 @@ function config ( $routeProvider, $locationProvider ) {
       controller: 'BooksIndexController',
       controllerAs: 'booksIndexCtrl'
     })
-    .otherwise({
-      redirectTo: '/'
-    });
+    // .otherwise({
+    //   redirectTo: '/'
+    // });
 
     $locationProvider
-      .html5Moxe({
+      .html5Mode({
         enabled: true,
         requireBase: false
       });
