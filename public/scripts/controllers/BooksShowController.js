@@ -2,9 +2,9 @@ angular
   .module('booksApp')
   .controller('BooksShowController', BooksShowController);
 
-  BooksShowController.$inject=['$http', '$routeParams', $'location'];
+  BooksShowController.$inject=['$http', '$routeParams', '$location'];
   function BooksShowController($http, $routeParams, $location) {
-    var vm=this;
+    var vm = this;
     var bookId = $routeParams.id;
     $http({
       method: 'GET',
@@ -19,5 +19,5 @@ angular
     function onError(error){
       console.log('There was an error ', error);
     }
-    
+
   }

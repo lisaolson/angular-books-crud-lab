@@ -2,13 +2,18 @@
 
 <div ng-repeat="book in booksIndexCtrl.books">
 
-<div id=image>
-  <img ng-src="{{book.image}}" class="img-responsive">
-</div>
-  <!-- {{book._id}} -->
-  <h5><a ng-href="/books/{{book._id}}">{{book.title}}</a></h5>
+    <div class="row">
+        <div class="col-xs-4">
+            <img ng-src="{{book.image}}" class="img-responsive">
+          </div>
+          <div class="col-xs-8">
 
-  <p>Written by {{book.author}}</p>
-  <p>Released on {{book.releaseDate}}</p>
+                <h5><a ng-href="/books/{{book._id}}">{{book.title}}</a></h5>
+                  <br>
+
+                  <p class="small">Written by {{book.author}}</p>
+                  <p class="small">Released on {{book.releaseDate}}</p>
+          </div>
+    </div>
 
 </div>

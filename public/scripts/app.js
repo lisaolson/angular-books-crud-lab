@@ -15,7 +15,7 @@ function config ( $routeProvider, $locationProvider ) {
     })
 
     .when('/books/:id', {
-      templateUrl: 'views/templates/books-show.html',
+      templateUrl: '../views/templates/booksShow.html',
       controller: 'BooksShowController',
       controllerAs: 'booksShowCtrl'
     })
