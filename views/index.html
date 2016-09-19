@@ -7,7 +7,7 @@
     <title>books</title>
 
     <!-- STYLESHEETS -->
-    <link type="text/css" rel="stylesheet" href="../public/styles/main.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- ANGULAR CDN -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
@@ -17,7 +17,7 @@
     <!-- APPLICATION SCRIPTS -->
     <script type="text/javascript" src="../public/scripts/app.js"></script>
     <script type="text/javascript" src="../public/scripts/controllers/BooksIndexController.js"></script>
-    <!-- <script src="/scripts/controllers/BooksShowController.js"></script> -->
+    <script src="/scripts/controllers/BooksShowController.js"></script>
 
     <title>Books App</title>
 
@@ -25,7 +25,13 @@
 
 <body>
 
-  <div ng-view></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
