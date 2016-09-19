@@ -19,4 +19,4 @@ function BooksIndexController($http) {
     function onError(error){
       console.log('there was an error: ', error);
     }
-  }
+  };
