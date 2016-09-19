@@ -24,7 +24,7 @@ angular
       console.log('updated book ', updatedBook);
       $http({
         method: 'PUT',
-        url: 'https://super-crud.herokuapp.com/books' + updatedBook._id,
+        url: 'https://super-crud.herokuapp.com/books/' + updatedBook._id,
         data: {
           title: updatedBook.title,
           author: updatedBook.author,
